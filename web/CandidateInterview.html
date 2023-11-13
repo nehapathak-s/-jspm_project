@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>www.jspm.com</title>
+
+	<style type="text/css">
+		 #brandname{
+		  	         background-color: #225E5E;
+		  	         color:white;
+		  	         padding: 10px;
+		          }
+		  body{
+		  	     margin: 0px;
+                             background-color: #429A9C;
+		       } 
+
+		p{
+		  	  margin-top: -24px;
+		  	  font-size: 23px;
+		  	  font-style: italic;
+		  } 
+
+		  #loginformdiv{
+		  	background-image: url(intpic.jpg);
+		  	    background-color: tomato;
+		  	    padding: 10px;
+		  	    width:50%;
+		  	    margin-left: 20px;
+		  	    margin-top: 20px;
+		  	    border-radius: 5px;
+		  } 
+
+		/*.inputclass{
+                    padding:8px;
+                    border-radius: 5px;
+                    width: 95%;
+                    border:none;
+		           } */
+		.buttonclass{
+                    padding: 5px 20px;
+                    border-radius: 5px;
+                    border:none; 
+                    background-color: white;
+                    color:tomato;
+                    font-size: 17px;
+		           }
+        .buttonclass:hover{
+                       cursor: pointer;
+                   }
+                   
+                   td
+		  {
+		  	color: #ED2D80;
+		  	font-weight: bold;
+		  }
+
+	</style>
+
+	<script type="text/javascript">
+		function myfun()
+		{
+			var tech=parseInt(document.f1.tech.value);
+			var apty=parseInt(document.f1.apty.value);
+			var hr=parseInt(document.f1.hr.value);
+
+			var tm=tech + apty + hr;
+			document.f1.tm.value=tm;
+
+			if(tech>=40  &&  apty>=40  &&  hr>=40)
+			{
+				document.f1.res.value="Selected";
+			}
+			else
+			{
+				document.f1.res.value="Rejected";
+			}
+		}
+                
+                function show_current_date()
+                {
+                    var d= new Date();
+                    var dd=d.getDate();
+                    
+                    var months=["JAN","FEB","MAR","APR","MAY","JUN","JUL","AUG","SEP","OCT","NOV","DEC"];
+                    var mm=months[d.getMonth()];
+                    
+                    var yy=d.getFullYear();
+                    
+                    var cdate=dd+"/"+mm+"/"+yy;
+                    document.f1.showdate.value=cdate;
+                }
+	</script>
+</head>
+<body onload="show_current_date()">
+
+	<div id="brandname">
+     	   <h1>JSPM Campus</h1>
+     	   <p>Education | Placement | Medical </p>
+     </div>
+
+     <div id="loginformdiv">
+           <center>
+           <form name="f1" action="CandidateInterview" method="post">	
+           	   <table  width="100%" cellpadding="5">
+
+           	   	    <tr>
+           	   	    	<th colspan="2">
+           	   	    		<h2>Candidate Interview Details</h2>
+           	   	    	</th>
+           	   	    </tr>
+
+           	   	    <tr>
+           	   	    	<td>Date</td>
+           	   	    	<td>
+                                    <input type="text" name="showdate" readonly>
+           	   	    	</td>
+           	   	    </tr>
+
+           	   	    <tr>
+           	   	  	  <td>First Name</td>
+           	   	  	  <td>
+           	   	  	  	 <input type="text"  name="fname" class="inputclass">
+           	   	  	  </td>
+           	   	    </tr>
+
+           	   	    <tr>
+           	   	      <td>Last Name</td>	
+              	  	    <td>
+              	  	 	   <input type="text"  name="lname" class="inputclass">
+              	  	    </td>
+           	   	    </tr>
+
+           	   	    <tr>
+           	   	       <td>Branch</td>	
+              	  	       <td>
+                                <select name="branch">
+                                    <option disabled selected>-----Select Branch-----</option>
+                                    <option value="Computer">Computer</option>
+                                    <option value="Mechanical">Mechanical</option>
+                                    <option value="Electrical">Electrical</option>
+                                    <option value="ENTC">ENTC</option>
+                                
+                                </select>
+              	  	        </td>
+           	   	        </tr>
+
+           	   	        <tr>
+           	   	        	<td>Tech Round</td>
+           	   	        	<td>
+           	   	        		<input type="text" name="tech">
+           	   	        	</td>
+           	   	        </tr>
+
+           	   	        <tr>
+           	   	        	<td>Apty Round</td>
+           	   	        	<td>
+           	   	        		<input type="text" name="apty">
+           	   	        	</td>
+           	   	        </tr>
+
+           	   	        <tr>
+           	   	        	<td>HR Round</td>
+           	   	        	<td>
+           	   	        		<input type="text" name="hr" onkeyup="myfun()">
+           	   	        	</td>
+           	   	        </tr>
+                         
+                         <tr>
+                         	<td>Total Mark</td>
+                         	<td>
+                         		<input type="text" name="tm">
+                         	</td>
+                         </tr>
+
+                         <tr>
+                         	<td>Result</td>
+                         	<td>
+                         		<input type="text" name="res">
+                         	</td>
+                         </tr>
+                         
+                      
+
+           	   	  <tr>
+           	   	  	   <td colspan="2" align="center">
+           	   	  	   	   <input type="submit" value="Register" class="buttonclass">
+                                  &nbsp;&nbsp; &nbsp;                        
+                           <input type="reset" value="Reset" class="buttonclass">
+                        </td>
+                        <!-- <td>
+                            <a href="Dashboard.html">   
+                                <input type="button" value="Go To Dashboard" class="buttonclass">
+                            </a>
+           	   	  	   </td> -->
+           	   	  </tr>
+
+           	   </table>
+           	   </form>
+           </center>
+     </div>	
+
+</body>
+</html>

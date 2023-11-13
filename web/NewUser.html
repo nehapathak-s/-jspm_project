@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>www.jspm.com</title>
+	<style type="text/css">
+		  #brandname{
+		  	         background-color: tomato;
+		  	         color:white;
+		  	         padding: 10px;
+		          }
+		  body{
+		  	     margin: 0px;
+		       } 
+
+		  p{
+		  	  margin-top: -24px;
+		  	  font-size: 23px;
+		  	  font-style: italic;
+		  } 
+
+		  #loginformdiv{
+		  	    background-color: tomato;
+		  	    padding: 10px;
+		  	    width:30%;
+		  	    margin-left: 20px;
+		  	    margin-top: 20px;
+		  	    border-radius: 5px;
+		  } 
+		 .buttonclass{
+                    padding: 5px;
+                    border-radius: 5px;
+                    width: 100%;
+                    border:none; 
+                    background-color: white;
+                    color:tomato;
+                    font-size: 20px;
+		  }                     
+	</style>
+
+	<script type="text/javascript">
+		
+		function myfun()
+		{
+			// var pass=document.f1.pass.value;
+		 //     var rpass=document.f1.rpass.value;
+
+		     if((pass=document.f1.pass.value)!=(rpass=document.f1.rpass.value))
+		     {
+		     	alert("Password and Retype Password mismatch");
+				document.f1.rpass.focus();
+				return false;
+		     }
+		}
+		
+	</script>
+</head>
+<body>
+
+     <div id="brandname">
+     	   <h1>JSPM </h1>
+     	   <p>Education | Placement | Medical </p>
+     </div>
+
+     <div id="loginformdiv">
+           <center>
+           <form name="f1" action="ServletNewUser" method="post">	
+           	   <table  width="100%" cellpadding="5">
+
+           	   	<tr>
+           	   		<td>First Name</td>
+           	   		<td>
+           	   			<input type="text" name="fname">
+           	   		</td>
+           	   	</tr>
+
+           	   	<tr>
+           	   		<td>Last Name</td>
+           	   		<td>
+           	   			<input type="text" name="lname">
+           	   		</td>
+           	   	</tr>
+
+           	   	  <tr>
+           	   	  	<td>Username</td>
+           	   	  	  <td>
+           	   	  	  	 <input type="text" placeholder="Username" name="uname">
+           	   	  	  </td>
+           	   	  </tr>
+
+           	   	  <tr>
+           	   	  	<td>Password</td>
+              	  	 <td>
+              	  	 	 <input type="text" placeholder="Password" name="pass">
+              	  	 </td>
+           	   	  </tr>
+
+           	   	  <tr>
+           	   	  	<td>Retype Password</td>
+           	   	  	<td>
+           	   	  		<input type="password" name="rpass">
+           	   	  	</td>
+           	   	  </tr>
+
+           	   	  <tr>
+           	   		<td>Phone No</td>
+           	   		<td>
+           	   			<input type="text" name="phoneno">
+           	   		</td>
+           	   	</tr>
+
+           	   	<tr>
+           	   		<td>Email</td>
+           	   		<td>
+           	   			<input type="email" name="email">
+           	   		</td>
+           	   	</tr>
+
+           	   	  <tr>
+           	   	  	   <td><input type="submit" value="Login" class="buttonclass" onclick="myfun()"></td>
+           	   	  	   <td><input type="reset" value="Reset" class="buttonclass"></td>
+           	   	  </tr>
+
+           	   </table>
+           	   </form>
+           </center>
+     </div>	
+
+</body>
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>www.jspm.com</title>
+	<style type="text/css">
+		  #brandname{
+		  	         background-color: tomato;
+		  	         color:white;
+		  	         padding: 10px;
+		          }
+		  body{
+		  	     margin: 0px;
+		       } 
+
+		  p{
+		  	  margin-top: -24px;
+		  	  font-size: 23px;
+		  	  font-style: italic;
+		  } 
+
+		  #loginformdiv{
+		  	    background-color: tomato;
+		  	    padding: 10px;
+		  	    width:50%;
+		  	    margin-left: 20px;
+		  	    margin-top: 20px;
+		  	    border-radius: 5px;
+		  } 
+
+		.inputclass{
+                    padding:8px;
+                    border-radius: 5px;
+                    width: 95%;
+                    border:none;
+		           } 
+		 .buttonclass{
+                    padding: 5px 20px;
+                    border-radius: 5px;
+                    border:none; 
+                    background-color: white;
+                    color:tomato;
+                    font-size: 17px;
+		   }
+                   .buttonclass:hover{
+                       cursor: pointer;
+                   }
+	</style>
+
+    <script type="text/javascript">
+        
+        function bill_show()
+        {
+            var rate=document.f1.rate.value;
+            var qty=document.f1.qty.value;
+
+            var bill=rate*qty;
+
+            document.f1.bill.value=bill;
+        }
+
+        function date_fun()
+        {
+            var d=new Date();
+
+            var yyyy=d.getFullYear();
+            var mm=d.getMonth();
+            var dd=d.getDate();
+
+            var pdate=dd+"/"+mm+"/"+yyyy;
+            document.f1.pdate.value=pdate;
+
+            var dayList=["SUN","MON","TUE","WED","THU","FRI","SAT"];
+            var day=dayList[d.getDay()];
+
+            document.f1.pday.value=day;
+        }
+    </script>
+</head>
+<body  onload="date_fun()">
+
+     <div id="brandname">
+     	   <h1>JSPM Campus</h1>
+     	   <p>Education Services</p>
+     </div>
+
+     <div id="loginformdiv">
+           <center>
+           <form name="f1" action="ServletTpoPettyCash" method="post">	
+           	   <table  width="100%" cellpadding="5">
+                       
+                       <tr>
+                           <th colspan="2" align="center">
+                       <h2>TPO Petty Cash</h2>
+                           </th>
+                       </tr>
+                   
+           	   	  <tr>
+           	   	  	  <td>Purchased Date</td>
+           	   	  	  <td>
+           	   	  	  	 <input type="text"  name="pdate">
+           	   	  	  </td>
+           	   	  </tr>
+
+                  <tr>
+                      <td>Purchased Day</td>
+                      <td>
+                          <input type="text" name="pday">
+                      </td>
+                  </tr>
+
+                  <tr>
+                      <td>Puroduct Name</td>
+                      <td>
+                          <input type="text" name="pname">
+                      </td>
+                  </tr>
+
+                  <tr>
+                      <td>Rate</td>
+                      <td>
+                          <input type="text" name="rate">
+                      </td>
+                  </tr>
+
+                  <tr>
+                      <td>Quantity</td>
+                      <td>
+                          <input type="text" name="qty" onkeyup="bill_show()">
+                      </td>
+                  </tr>
+
+           	   	  <tr>
+                      <td>Bill Amount</td>
+                      <td>
+                          <input type="text" name="bill">
+                      </td>
+                  </tr>
+
+                  <tr>
+                      <td>Purchased From</td>
+                      <td>
+                          <input type="text" name="pfrom">
+                      </td>
+                  </tr>
+
+                  <tr>
+                      <td>Purchased By</td>
+                      <td>
+                          <input type="text" name="pby">
+                      </td>
+                  </tr>
+                         
+                 <tr>
+                    <td>Purpose Of Purchase</td>
+                    <td>
+                        <textarea cols="30" rows="3" name="purpose"></textarea>
+                    </td>
+                </tr>
+
+                <tr>
+                      <td>Approval By</td>
+                      <td>
+                          <input type="text" name="aby">
+                      </td>
+                  </tr>
+           	   	    
+                      
+
+           	   	  <tr>
+           	   	  	   <td>
+           	   	  	   	   <input type="submit" value="SUBMIT" class="buttonclass">
+                                   </td>
+                                   <td>                                   
+                                           <input type="reset" value="RESET" class="buttonclass">
+                                   </td>
+                                   
+           	   	  </tr>
+
+           	   </table>
+           	   </form>
+           </center>
+     </div>	
+
+</body>
+</html>
+

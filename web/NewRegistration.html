@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>www.jspm.com</title>
+	<style type="text/css">
+		  #brandname{
+		  	         background-color: tomato;
+		  	         color:white;
+		  	         padding: 10px;
+		          }
+		  body{
+		  	     margin: 0px;
+		       } 
+
+		  p{
+		  	  margin-top: -24px;
+		  	  font-size: 23px;
+		  	  font-style: italic;
+		  } 
+
+		  #loginformdiv{
+		  	    background-color: #6D70A1;
+		  	    padding: 10px;
+		  	    width:50%;
+		  	    margin-left: 20px;
+		  	    margin-top: 20px;
+		  	    border-radius: 5px;
+		  } 
+
+		.inputclass{
+                    padding:8px;
+                    border-radius: 5px;
+                    width: 95%;
+                    border:none;
+		           } 
+		 .buttonclass{
+                    padding: 5px 20px;
+                    border-radius: 5px;
+                    border:none; 
+                    background-color: white;
+                    color:tomato;
+                    font-size: 17px;
+		   }
+                   .buttonclass:hover{
+                       cursor: pointer;
+                   }
+	</style>
+
+    <script type="text/javascript">
+        
+        function myfun()
+        {
+            var tech_list="";
+            for(i=0;  i<=3;  i++)
+            {
+                if(document.f1.tech[i].checked==true)
+                {
+                    tech_list=tech_list+" "+f1.tech[i].value;
+                }
+
+                document.f1.techlist.value=tech_list;
+            }
+        }
+    </script>
+</head>
+<body>
+
+     <div id="brandname">
+     	   <h1>JSPM Campus</h1>
+     	    <p>Education | Placement | Medical </p>
+     </div>
+
+     <div id="loginformdiv">
+           <center>
+           <form name="f1" action="ServletRegistration" method="post">	
+           	   <table  width="100%" cellpadding="5">
+           	   	  <tr>
+           	   	  	  <td>First Name</td>
+           	   	  	  <td>
+           	   	  	  	 <input type="text"  name="fname" class="inputclass">
+           	   	  	  </td>
+           	   	  </tr>
+
+           	   	 <tr>
+           	   	    <td>Last Name</td>	
+              	  	    <td>
+              	  	 	 <input type="text"  name="lname" class="inputclass">
+              	  	    </td>
+           	   	 </tr>
+
+           	   	 <tr>
+           	   	    <td>Branch</td>	
+              	  	    <td>
+                                <select name="branch">
+                                    <option disabled selected>-----Select Branch-----</option>
+                                    <option value="Computer">Computer</option>
+                                    <option value="Mechanical">Mechanical</option>
+                                    <option value="Electrical">Electrical</option>
+                                    <option value="ENTC">ENTC</option>
+                                
+                                </select>
+              	  	    </td>
+           	   	 </tr>
+
+                     <tr>
+           	   	    <td>PhoneNo</td>	
+              	  	    <td>
+              	  	 	 <input type="text"  name="phoneno" class="inputclass">
+              	  	    </td>
+           	   	 </tr>
+
+           	   	 <tr>
+           	   	    <td>Email</td>	
+              	  	    <td>
+              	  	 	 <input type="text"  name="email" class="inputclass">
+              	  	    </td>
+           	   	 </tr>
+                         
+                         <tr>
+           	   	    <td>Technology</td>	
+
+                            <td> 
+                               <input type="checkbox" value="JAVA" name="tech" onclick="myfun()">JAVA
+                                <input type="checkbox" value="PHP" name="tech" onclick="myfun()">PHP
+                                <input type="checkbox" value="PYHON" name="tech" onclick="myfun()">Python
+                                <input type="checkbox" value="ORACLE" name="tech" onclick="myfun()">Oracle
+              	  	        </td>
+           	   	 </tr>
+                         
+                         <tr>
+           	   	    <td>Technology List</td>	
+              	  	    <td>
+              	  	 	 <input type="text"  name="techlist" class="inputclass">
+              	  	    </td>
+           	   	 </tr>
+                         
+                         <tr>
+           	   	    <td>Gender</td>	
+              	  	    <td>
+              	  	 	 <input type="radio"  name="gender" value="Male">Male
+                                 <input type="radio"  name="gender" value="Female">Female
+              	  	    </td>
+           	   	 </tr>
+                         
+                      
+
+           	   	  <tr>
+           	   	  	   <td>
+           	   	  	   	   <input type="submit" value="Register" class="buttonclass">
+                                   </td>
+                                   <td>                                   
+                                           <input type="reset" value="Reset" class="buttonclass">
+                                   </td>
+                                   <td>
+                                       <a href="Dashboard.html">   
+                                         <input type="button" value="Go To Dashboard" class="buttonclass">
+                                       </a>
+           	   	  	   </td>
+           	   	  </tr>
+
+           	   </table>
+           	   </form>
+           </center>
+     </div>	
+
+</body>
+</html>

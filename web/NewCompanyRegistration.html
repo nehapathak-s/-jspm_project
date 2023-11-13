@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>www.jspm.com</title>
+	<style type="text/css">
+		  #brandname{
+		  	         background-color: #61638F;
+		  	         color:white;
+		  	         padding: 10px;
+		          }
+		  body{
+		  	     margin: 0px;
+		  	     background-color: #898CC9;
+		       } 
+
+		  p{
+		  	  margin-top: -24px;
+		  	  font-size: 23px;
+		  	  font-style: italic;
+		  } 
+
+		  #loginformdiv{
+		  	    
+		  	    /*background-color: tomato;*/
+		  	    background-image: url(comp.jpg);
+		  	    padding: 10px;
+		  	    width:40%;
+		  	    margin-left: 20px;
+		  	    margin-top: 20px;
+		  	    border-radius: 5px;
+		  } 
+		  td
+		  {
+		  	color: #335152;
+		  	font-weight: bold;
+		  }
+		 .buttonclass{
+                    padding: 5px;
+                    border-radius: 5px;
+                    width: 70px;
+                    border:none; 
+                    background-color: skyblue;
+                    font-size: 15px;
+		  }
+		  .buttonclass:hover
+		  {
+		  	cursor: pointer;
+		  	font-weight: bold;
+		  }                     
+	</style>
+
+	 <script type="text/javascript">
+	 	function date_fun()
+        {
+            var d=new Date();
+
+            var yyyy=d.getFullYear();
+            var mm=d.getMonth();
+            var dd=d.getDate();
+
+            var pdate=dd+"/"+mm+"/"+yyyy;
+            document.f1.rdate.value=pdate;
+
+        }
+	 </script>
+
+</head>
+<body onload="date_fun()">
+
+     <div id="brandname">
+     	   <h1>JSPM CAMPUS</h1>
+     	   <p>Education | Placement | Medical </p>
+     </div>
+
+     <div id="loginformdiv">
+           <center>
+           <form name="f1" action="NewCompanyRegistrationServlet" method="post">	
+           	   <table  width="100%" cellpadding="5">
+           	      <tr>
+           	      	<th colspan="2">
+           	      		<h2>New Company Registration</h2>
+           	      	</th>
+           	      </tr>           	   	
+           	   	 <tr>
+           	   	  	  <td> Date Of Registration</td>
+           	   	  	  <td>
+           	   	  	  	 <input type="text"  name="rdate">
+           	   	  	  </td>
+           	   	  </tr>
+
+           	   	  <tr>
+           	   	  	<td>Company Name</td>
+           	   	  	<td>
+           	   	  		<input type="text" name="cname">
+           	   	  	</td>
+           	   	  </tr>           	   	  
+
+           	   	<tr>
+           	   		<td>HR Name</td>
+           	   		<td>
+           	   			<input type="text" name="hrname">
+           	   		</td>
+           	   	</tr>
+
+           	   	
+           	   	  <tr>
+           	   		<td>HR Phone No</td>
+           	   		<td>
+           	   			<input type="text" name="hrphoneno">
+           	   		</td>
+           	   	</tr>
+
+           	   	<tr>
+           	   		<td>HR Email</td>
+           	   		<td>
+           	   			<input type="email" name="hremail">
+           	   		</td>
+           	   	</tr>
+
+           	   	<tr>
+           	   		<td>Company Address</td>
+           	   		<td>
+           	   			<textarea cols="30" rows="3" name="cadd"></textarea>
+           	   		</td>
+           	   	</tr>
+
+           	   	<tr>
+           	   		<td>Campus Date</td>
+           	   		<td>
+           	   			<input type="date" name="cdate">
+           	   		</td>
+           	   	</tr>
+
+           	   	<tr>
+           	   		<td>Registered By</td>
+           	   		<td>
+           	   			<input type="text" name="rby">
+           	   		</td>
+           	   	</tr>
+
+
+           	   	  <tr>
+           	   	  	   <td colspan="2" align="center">
+           	   	  	   	 <input type="submit" value="Submit" onclick="myfun()" class="buttonclass">
+           	   	  	      <input type="reset" value="Reset" class="buttonclass">
+           	   	  	   </td>
+           	   	  </tr>
+
+           	   </table>
+           	   </form>
+           </center>
+     </div>	
+
+</body>
+</html>

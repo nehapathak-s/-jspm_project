@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>www.jspm.com</title>
+	<style type="text/css">
+		  #brandname{
+		  	         background-color: #40425E;
+		  	         color:white;
+		  	         padding: 10px;
+		          }
+		  body{
+		  	     margin: 0px;
+                             background-color: #8589C4;
+		       } 
+                       td
+		  {
+		  	color: #335152;
+		  	font-weight: bold;
+		  }
+
+		  p{
+		  	  margin-top: -24px;
+		  	  font-size: 23px;
+		  	  font-style: italic;
+		  } 
+
+		  #loginformdiv{
+                background-image: url(nadm.jpg);
+                background-repeat: no-repeat;
+		  	    padding: 10px;
+		  	    width:50%;
+		  	    margin-left: 20px;
+		  	    margin-top: 20px;
+		  	    border-radius: 5px;
+		  } 
+
+		.inputclass{
+                    padding:8px;
+                    border-radius: 5px;
+                    width: 95%;
+                    border:none;
+		           } 
+		 .buttonclass{
+                    padding: 5px 20px;
+                    border-radius: 5px;
+                    border:none; 
+                    background-color: #40425E;
+                    color:tomato;
+                    font-size: 17px;
+		   }
+                   .buttonclass:hover{
+                       cursor: pointer;
+                   }
+	</style>
+
+    <script type="text/javascript">
+        
+        function my_fun()
+        {
+            var cast=document.f1.cast.value;
+
+            if(cast=="open")
+            {
+                document.f1.fees.value=50000;
+            }
+            if(cast=="st")
+            {
+                document.f1.fees.value=30000;
+            }
+            if(cast=="other")
+            {
+                document.f1.fees.value=20000;
+            }
+        }
+    </script>
+</head>
+<body>
+
+     <div id="brandname">
+     	   <h1>JSPM Campus</h1>
+     	    <p>Education | Placement | Medical </p>
+     </div>
+
+     <div id="loginformdiv">
+           <center>
+           <form name="f1" action="NewAdmissionServlet" method="post">	
+           	   <table  width="100%" cellpadding="5">
+
+                <tr>
+                    <th colspan="2">
+                        <h2>New Admission Form</h2>
+                    </th>
+                </tr>
+           	   	  <tr>
+           	   	  	  <td>First Name</td>
+           	   	  	  <td>
+           	   	  	  	 <input type="text"  name="fname">
+           	   	  	  </td>
+           	   	  </tr>
+
+           	   	 <tr>
+           	   	    <td>Last Name</td>	
+              	  	    <td>
+              	  	 	 <input type="text"  name="lname">
+              	  	    </td>
+           	   	 </tr>
+
+           	   	 <tr>
+           	   	    <td>Branch</td>	
+              	  	    <td>
+                                <select name="branch">
+                                    <option disabled selected>-----Select Branch-----</option>
+                                    <option value="Computer">Computer</option>
+                                    <option value="Mechanical">Mechanical</option>
+                                    <option value="Electrical">Electrical</option>
+                                    <option value="ENTC">ENTC</option>
+                                
+                                </select>
+              	  	    </td>
+           	   	 </tr>
+
+                 <tr>
+                     <td>Caste</td>
+                     <td>
+                         <input type="radio" name="cast" value="open" onclick="my_fun()">Open-5000
+                         <input type="radio" name="cast" value="st" onclick="my_fun()">ST-30000
+                         <input type="radio" name="cast" value="other" onclick="my_fun()">Other-20000
+                     </td>
+                 </tr>
+
+                 <tr>
+                     <td>Fees</td>
+                     <td>
+                         <input type="text" name="fees">
+                     </td>
+                 </tr>
+
+                     <tr>
+           	   	    <td>PhoneNo</td>	
+              	  	    <td>
+              	  	 	 <input type="text"  name="phoneno">
+              	  	    </td>
+           	   	 </tr>
+
+           	   	 <tr>
+           	   	    <td>Email</td>	
+              	  	    <td>
+              	  	 	 <input type="text"  name="email">
+              	  	    </td>
+           	   	 </tr>
+                         
+                 <tr>
+                    <td>Local Address</td>
+                    <td>
+                        <textarea cols="30" rows="4" name="add"></textarea>
+                    </td>
+                </tr>
+           	   	    
+                      
+
+           	   	  <tr>
+           	   	  	   <td colspan="2" align="center">
+           	   	  	   	   <input type="submit" value="Register" class="buttonclass">
+                           <input type="reset" value="Reset" class="buttonclass">
+                            <a href="Dashboard.html">   
+                                 <input type="button" value="Go To Dashboard" class="buttonclass">
+                            </a>
+           	   	  	   </td>
+           	   	  </tr>
+
+           	   </table>
+           	   </form>
+           </center>
+     </div>	
+
+</body>
+</html>
